@@ -1,6 +1,6 @@
 class GameBoard {
   constructor(boardSize) {
-    this.boardSize **= boardSize;
+    this.boardSize = boardSize ** 2;
     this.oldIndex = 0;
     this.itemIndex = 0;
   }
@@ -26,7 +26,7 @@ class GameBoard {
         oldItemField.innerHTML = '';
       }
       const itemField = document.getElementById(`field${this.itemIndex}`);
-      itemField.innerHTML = '<img src = "./src/img/goblin.png">';
+      itemField.innerHTML = '<img src = "./goblin.png">';
       this.oldIndex = this.itemIndex;
     }, 1000);
   }
